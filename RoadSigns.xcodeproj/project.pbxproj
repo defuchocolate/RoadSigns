@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E002C47216C54C9800863F5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E002C47116C54C9800863F5E /* main.cpp */; };
+		E002C47416C54C9800863F5E /* RoadSigns.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E002C47316C54C9800863F5E /* RoadSigns.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E002C46C16C54C9800863F5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				E002C47416C54C9800863F5E /* RoadSigns.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E002C46E16C54C9800863F5E /* RoadSigns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RoadSigns; sourceTree = BUILT_PRODUCTS_DIR; };
+		E002C47116C54C9800863F5E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E002C47316C54C9800863F5E /* RoadSigns.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RoadSigns.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E002C46B16C54C9800863F5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E002C46516C54C9800863F5E = {
+			isa = PBXGroup;
+			children = (
+				E002C47016C54C9800863F5E /* RoadSigns */,
+				E002C46F16C54C9800863F5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E002C46F16C54C9800863F5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E002C46E16C54C9800863F5E /* RoadSigns */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E002C47016C54C9800863F5E /* RoadSigns */ = {
+			isa = PBXGroup;
+			children = (
+				E002C47116C54C9800863F5E /* main.cpp */,
+				E002C47316C54C9800863F5E /* RoadSigns.1 */,
+			);
+			path = RoadSigns;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E002C46D16C54C9800863F5E /* RoadSigns */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E002C47716C54C9800863F5E /* Build configuration list for PBXNativeTarget "RoadSigns" */;
+			buildPhases = (
+				E002C46A16C54C9800863F5E /* Sources */,
+				E002C46B16C54C9800863F5E /* Frameworks */,
+				E002C46C16C54C9800863F5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoadSigns;
+			productName = RoadSigns;
+			productReference = E002C46E16C54C9800863F5E /* RoadSigns */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E002C46616C54C9800863F5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Fernando Birra";
+			};
+			buildConfigurationList = E002C46916C54C9800863F5E /* Build configuration list for PBXProject "RoadSigns" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E002C46516C54C9800863F5E;
+			productRefGroup = E002C46F16C54C9800863F5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E002C46D16C54C9800863F5E /* RoadSigns */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E002C46A16C54C9800863F5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E002C47216C54C9800863F5E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E002C47516C54C9800863F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E002C47616C54C9800863F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E002C47816C54C9800863F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E002C47916C54C9800863F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E002C46916C54C9800863F5E /* Build configuration list for PBXProject "RoadSigns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E002C47516C54C9800863F5E /* Debug */,
+				E002C47616C54C9800863F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E002C47716C54C9800863F5E /* Build configuration list for PBXNativeTarget "RoadSigns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E002C47816C54C9800863F5E /* Debug */,
+				E002C47916C54C9800863F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E002C46616C54C9800863F5E /* Project object */;
+}
