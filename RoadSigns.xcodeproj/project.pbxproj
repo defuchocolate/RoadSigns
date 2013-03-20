@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E002C47216C54C9800863F5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E002C47116C54C9800863F5E /* main.cpp */; };
 		E002C47416C54C9800863F5E /* RoadSigns.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E002C47316C54C9800863F5E /* RoadSigns.1 */; };
+		E002C48116C5637D00863F5E /* libopencv_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E002C47A16C5629200863F5E /* libopencv_core.dylib */; };
+		E002C4A916C5DBE100863F5E /* libopencv_highgui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E002C4A816C5DBE100863F5E /* libopencv_highgui.dylib */; };
+		E002C4AB16C5DBE800863F5E /* libopencv_imgproc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E002C4AA16C5DBE800863F5E /* libopencv_imgproc.dylib */; };
+		E08277E116FA7FD000097C9A /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E08277E016FA7FD000097C9A /* Main.cpp */; };
+		E0845F2816CD2E820092FA25 /* ShapeFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0845F2616CD2E820092FA25 /* ShapeFinder.cpp */; };
+		E0845F2B16CD2EF20092FA25 /* Shapes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0845F2916CD2EF20092FA25 /* Shapes.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +31,42 @@
 
 /* Begin PBXFileReference section */
 		E002C46E16C54C9800863F5E /* RoadSigns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RoadSigns; sourceTree = BUILT_PRODUCTS_DIR; };
-		E002C47116C54C9800863F5E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E002C47316C54C9800863F5E /* RoadSigns.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RoadSigns.1; sourceTree = "<group>"; };
+		E002C47A16C5629200863F5E /* libopencv_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.dylib; path = ../../../../../../usr/local/lib/libopencv_core.dylib; sourceTree = "<group>"; };
+		E002C47C16C5634700863F5E /* AppKitScripting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKitScripting.framework; path = System/Library/Frameworks/AppKitScripting.framework; sourceTree = SDKROOT; };
+		E002C4A816C5DBE100863F5E /* libopencv_highgui.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.dylib; path = ../../../../../../usr/local/lib/libopencv_highgui.dylib; sourceTree = "<group>"; };
+		E002C4AA16C5DBE800863F5E /* libopencv_imgproc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.dylib; path = ../../../../../../usr/local/lib/libopencv_imgproc.dylib; sourceTree = "<group>"; };
+		E08277E016FA7FD000097C9A /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		E0845F0C16CCF0240092FA25 /* Arg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arg.h; sourceTree = "<group>"; };
+		E0845F0D16CCF0240092FA25 /* ArgException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgException.h; sourceTree = "<group>"; };
+		E0845F0E16CCF0240092FA25 /* ArgTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgTraits.h; sourceTree = "<group>"; };
+		E0845F0F16CCF0240092FA25 /* CmdLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLine.h; sourceTree = "<group>"; };
+		E0845F1016CCF0240092FA25 /* CmdLineInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLineInterface.h; sourceTree = "<group>"; };
+		E0845F1116CCF0240092FA25 /* CmdLineOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdLineOutput.h; sourceTree = "<group>"; };
+		E0845F1216CCF0240092FA25 /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
+		E0845F1316CCF0240092FA25 /* DocBookOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocBookOutput.h; sourceTree = "<group>"; };
+		E0845F1416CCF0240092FA25 /* HelpVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVisitor.h; sourceTree = "<group>"; };
+		E0845F1516CCF0240092FA25 /* IgnoreRestVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IgnoreRestVisitor.h; sourceTree = "<group>"; };
+		E0845F1616CCF0240092FA25 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		E0845F1716CCF0240092FA25 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		E0845F1816CCF0240092FA25 /* MultiArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiArg.h; sourceTree = "<group>"; };
+		E0845F1916CCF0240092FA25 /* MultiSwitchArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSwitchArg.h; sourceTree = "<group>"; };
+		E0845F1A16CCF0240092FA25 /* OptionalUnlabeledTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionalUnlabeledTracker.h; sourceTree = "<group>"; };
+		E0845F1B16CCF0240092FA25 /* StandardTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardTraits.h; sourceTree = "<group>"; };
+		E0845F1C16CCF0240092FA25 /* StdOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdOutput.h; sourceTree = "<group>"; };
+		E0845F1D16CCF0240092FA25 /* SwitchArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchArg.h; sourceTree = "<group>"; };
+		E0845F1E16CCF0240092FA25 /* UnlabeledMultiArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlabeledMultiArg.h; sourceTree = "<group>"; };
+		E0845F1F16CCF0240092FA25 /* UnlabeledValueArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlabeledValueArg.h; sourceTree = "<group>"; };
+		E0845F2016CCF0240092FA25 /* ValueArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueArg.h; sourceTree = "<group>"; };
+		E0845F2116CCF0240092FA25 /* ValuesConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuesConstraint.h; sourceTree = "<group>"; };
+		E0845F2216CCF0240092FA25 /* VersionVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionVisitor.h; sourceTree = "<group>"; };
+		E0845F2316CCF0240092FA25 /* Visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		E0845F2416CCF0240092FA25 /* XorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XorHandler.h; sourceTree = "<group>"; };
+		E0845F2516CCF0240092FA25 /* ZshCompletionOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZshCompletionOutput.h; sourceTree = "<group>"; };
+		E0845F2616CD2E820092FA25 /* ShapeFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShapeFinder.cpp; sourceTree = "<group>"; };
+		E0845F2716CD2E820092FA25 /* ShapeFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeFinder.h; sourceTree = "<group>"; };
+		E0845F2916CD2EF20092FA25 /* Shapes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shapes.cpp; sourceTree = "<group>"; };
+		E0845F2A16CD2EF20092FA25 /* Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E002C48116C5637D00863F5E /* libopencv_core.dylib in Frameworks */,
+				E002C4A916C5DBE100863F5E /* libopencv_highgui.dylib in Frameworks */,
+				E002C4AB16C5DBE800863F5E /* libopencv_imgproc.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +86,10 @@
 		E002C46516C54C9800863F5E = {
 			isa = PBXGroup;
 			children = (
+				E002C4AA16C5DBE800863F5E /* libopencv_imgproc.dylib */,
+				E002C4A816C5DBE100863F5E /* libopencv_highgui.dylib */,
+				E002C47A16C5629200863F5E /* libopencv_core.dylib */,
+				E002C47C16C5634700863F5E /* AppKitScripting.framework */,
 				E002C47016C54C9800863F5E /* RoadSigns */,
 				E002C46F16C54C9800863F5E /* Products */,
 			);
@@ -60,10 +106,48 @@
 		E002C47016C54C9800863F5E /* RoadSigns */ = {
 			isa = PBXGroup;
 			children = (
-				E002C47116C54C9800863F5E /* main.cpp */,
+				E0845F0B16CCF0240092FA25 /* tclap */,
 				E002C47316C54C9800863F5E /* RoadSigns.1 */,
+				E08277E016FA7FD000097C9A /* Main.cpp */,
+				E0845F2916CD2EF20092FA25 /* Shapes.cpp */,
+				E0845F2A16CD2EF20092FA25 /* Shapes.h */,
+				E0845F2616CD2E820092FA25 /* ShapeFinder.cpp */,
+				E0845F2716CD2E820092FA25 /* ShapeFinder.h */,
 			);
 			path = RoadSigns;
+			sourceTree = "<group>";
+		};
+		E0845F0B16CCF0240092FA25 /* tclap */ = {
+			isa = PBXGroup;
+			children = (
+				E0845F0C16CCF0240092FA25 /* Arg.h */,
+				E0845F0D16CCF0240092FA25 /* ArgException.h */,
+				E0845F0E16CCF0240092FA25 /* ArgTraits.h */,
+				E0845F0F16CCF0240092FA25 /* CmdLine.h */,
+				E0845F1016CCF0240092FA25 /* CmdLineInterface.h */,
+				E0845F1116CCF0240092FA25 /* CmdLineOutput.h */,
+				E0845F1216CCF0240092FA25 /* Constraint.h */,
+				E0845F1316CCF0240092FA25 /* DocBookOutput.h */,
+				E0845F1416CCF0240092FA25 /* HelpVisitor.h */,
+				E0845F1516CCF0240092FA25 /* IgnoreRestVisitor.h */,
+				E0845F1616CCF0240092FA25 /* Makefile.am */,
+				E0845F1716CCF0240092FA25 /* Makefile.in */,
+				E0845F1816CCF0240092FA25 /* MultiArg.h */,
+				E0845F1916CCF0240092FA25 /* MultiSwitchArg.h */,
+				E0845F1A16CCF0240092FA25 /* OptionalUnlabeledTracker.h */,
+				E0845F1B16CCF0240092FA25 /* StandardTraits.h */,
+				E0845F1C16CCF0240092FA25 /* StdOutput.h */,
+				E0845F1D16CCF0240092FA25 /* SwitchArg.h */,
+				E0845F1E16CCF0240092FA25 /* UnlabeledMultiArg.h */,
+				E0845F1F16CCF0240092FA25 /* UnlabeledValueArg.h */,
+				E0845F2016CCF0240092FA25 /* ValueArg.h */,
+				E0845F2116CCF0240092FA25 /* ValuesConstraint.h */,
+				E0845F2216CCF0240092FA25 /* VersionVisitor.h */,
+				E0845F2316CCF0240092FA25 /* Visitor.h */,
+				E0845F2416CCF0240092FA25 /* XorHandler.h */,
+				E0845F2516CCF0240092FA25 /* ZshCompletionOutput.h */,
+			);
+			path = tclap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E002C47216C54C9800863F5E /* main.cpp in Sources */,
+				E0845F2816CD2E820092FA25 /* ShapeFinder.cpp in Sources */,
+				E0845F2B16CD2EF20092FA25 /* Shapes.cpp in Sources */,
+				E08277E116FA7FD000097C9A /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,14 +270,36 @@
 		E002C47816C54C9800863F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/$(PROJECT_NAME)",
+					/usr/local/include/opencv,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		E002C47916C54C9800863F5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/$(PROJECT_NAME)",
+					/usr/local/include/opencv,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -214,6 +322,7 @@
 				E002C47916C54C9800863F5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
