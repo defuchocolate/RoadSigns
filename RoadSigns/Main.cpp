@@ -16,6 +16,9 @@
 
 #include "ShapeFinder.h"
 
+#define TEMPLATE_SIZE   32.0
+#define GRAD_THRESHOLD  150
+
 
 
 std::vector<int> &split(const std::string &s, char delim, std::vector<int> &elems) {
@@ -46,16 +49,32 @@ void HSVtoHUE(cv::Mat &input, cv::Mat &output)
 
 
 
+std::string tempName(int length) {
+    std::string result;
+    
+    for(int i=0; i<length; i++) {
+        result.push_back(rand()%26+'a');
+    }
+    return result;
+}
+
 
 double maxV=0.0;
 bool debug_mode = false;
 bool extract_mode = false;
 int frame_nr = 0;
 std::string extract_dir;
+std::string strand;
+
+bool tri_mode = false;
+bool square_mode = false;
+bool octagon_mode = false;
+bool circle_mode = false;
 
 void captureImages(const std::vector<Shape*> &shapes, cv::Mat &img)
 {
     int shape_nr = 0;
+    
     for(std::vector<Shape*>::const_iterator it = shapes.begin(); it!=shapes.end(); it++, shape_nr++) {
         // Best place to dump the individual subimages
         if(extract_mode) {
@@ -66,9 +85,9 @@ void captureImages(const std::vector<Shape*> &shapes, cv::Mat &img)
             
             cv::Mat subimage(img, cv::Rect_<int>(left, top, width, height));
             std::stringstream ss;
-            ss << extract_dir << "/" << (*it)->nsides << "_" << "img" << frame_nr << "_" << shape_nr << ".jpg";
+            ss << extract_dir << "/" << (*it)->nsides << "_" << strand << frame_nr << "_" << shape_nr << ".jpg";
             if(width==height) {
-                cv::resize(subimage, subimage, cv::Size(), 50.0/width, 50.0/height, CV_INTER_LINEAR);
+                cv::resize(subimage, subimage, cv::Size(), TEMPLATE_SIZE/width, TEMPLATE_SIZE/height, CV_INTER_LINEAR);
                 cv::imwrite(ss.str(), subimage);
             }
         }
@@ -92,11 +111,8 @@ int main(int argc, char* argv[])
     std::string stream_file;
     std::string color_mode;
     std::string lengths_string;
+    std::string types_string;
     
-    bool tri_mode = true;
-    bool square_mode = true;
-    bool octagon_mode = true;
-    bool circle_mode = true;
     
     cv::Mat frame;
     
@@ -107,6 +123,7 @@ int main(int argc, char* argv[])
         TCLAP::ValueArg<std::string> mode_arg("c", "color", "Color mode (hsv or grayscale)", false, "hsv", "hsv|gray");
         TCLAP::ValueArg<std::string> mirror_arg("m", "mirror", "Mirror mode (none | horizontal | vertical | both)", false, "none", "string");
         TCLAP::ValueArg<std::string> lengths_arg("l", "lengths", "Lengths of signs", false, "5", "comma separated list of lenths");
+        TCLAP::ValueArg<std::string> types_arg("t", "types", "Types of road signs", false, "0", "comma separate list of int values");
         TCLAP::ValueArg<float> scale_arg("s", "scale", "Scaling factor", false, 1.0f, "float");
         TCLAP::ValueArg<int> width_arg("x", "sizex", "Horizontal image size", false, -1, "int");
         TCLAP::ValueArg<int> height_arg("y", "sizey", "Vertical image size", false, -1, "int");
@@ -118,6 +135,7 @@ int main(int argc, char* argv[])
         cmd.add(mode_arg);
         cmd.add(mirror_arg);
         cmd.add(lengths_arg);
+        cmd.add(types_arg);
         cmd.add(scale_arg);
         cmd.add(width_arg);
         cmd.add(height_arg);
@@ -149,6 +167,7 @@ int main(int argc, char* argv[])
         width = width_arg.getValue();
         height = height_arg.getValue();
         lengths_string = lengths_arg.getValue();
+        types_string = types_arg.getValue();
     }
     catch  (TCLAP::ArgException &e)  // catch any exceptions
     {
@@ -181,11 +200,22 @@ int main(int argc, char* argv[])
         cv::namedWindow("gradient", CV_WINDOW_AUTOSIZE);
         cv::namedWindow("S", CV_WINDOW_AUTOSIZE);
     }
-    
-    // TODO: Get this data from command line
+    // Get the length values from the command line
     std::vector<int> lengths = split(lengths_string, ',');
     
-    for(;;) {
+    // Get the signs to be considered from the command line
+    std::vector<int> types = split(types_string, ',');
+    for(std::vector<int>::const_iterator it = types.begin(); it!=types.end(); it++)
+        switch(*it) {
+            case 0: circle_mode = !circle_mode; break;
+            case 3: tri_mode = !tri_mode; break;
+            case 4: square_mode = !square_mode; break;
+            case 8: octagon_mode = !octagon_mode; break;
+        }
+    // Generate temporary filename strand
+    strand = tempName(5);
+    
+    while(!frame.empty()) {
         cv::Mat resized, space, hsv;
         
         cv::resize(frame, resized, cv::Size(), scalex, scaley, CV_INTER_LINEAR);
@@ -201,9 +231,9 @@ int main(int argc, char* argv[])
         }
         
         ShapeFinder sf(space);
-        // TODO: Change this to a configured parameter
         
-        sf.prepare(150);
+        // TODO: Change this to a configured parameter
+        sf.prepare(GRAD_THRESHOLD);
         
         std::vector<Shape*> c_shapes;
         std::vector<Shape*> t_shapes;
