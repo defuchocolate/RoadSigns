@@ -114,6 +114,7 @@ int main(int argc, char* argv[])
     std::string lengths_string;
     std::string types_string;
     
+    std::srand((unsigned) std::time(0));
     
     cv::Mat frame;
     
