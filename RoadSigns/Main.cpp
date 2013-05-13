@@ -232,6 +232,7 @@ int main(int argc, char* argv[])
             HSVtoHUE(hsv, space);
         }
         
+        cv::normalize(space, space, 0, 255, cv::NORM_MINMAX);
         ShapeFinder sf(space);
         
         // TODO: Change this to a configured parameter
